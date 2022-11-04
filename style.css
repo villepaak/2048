@@ -1,3 +1,13 @@
+/*
+
+COLOUR PALETTE: 
+
+
+60 - 30 - 10
+
+*/
+
+
 body {
 
     background-image: linear-gradient(#8420ab, #7b25ae, #722ab0, #682db3, #8420ab);
@@ -30,6 +40,7 @@ body {
     height: 400px;
     background-color: #cdc1b5;
     border: 5px solid #bbada0;
+    border-radius: 10px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -46,6 +57,7 @@ body {
     width: 90px;
     height: 90px;
     border: 5px solid #bbada0;
+    border-radius: 10px;
     font-size: 40px;
     font-weight: bold;
 
