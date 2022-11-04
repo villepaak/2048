@@ -1,0 +1,143 @@
+body {
+
+    background-image: linear-gradient(#8420ab, #7b25ae, #722ab0, #682db3, #8420ab);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto Slab', sans-serif;
+    height: 713px;
+
+}
+
+/* STYLING FOR TOP PART */
+
+.score {
+
+    color: rgb(244, 234, 249);
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 26px;
+
+}
+
+/* STYLING FOR THE BOARD*/
+
+.game-board {
+    
+    width: 400px;
+    height: 400px;
+    background-color: #cdc1b5;
+    border: 5px solid #bbada0;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* STYLING FOR TILES */
+
+.tile {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    border: 5px solid #bbada0;
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+.x2 {
+
+    background-color: #dae2ee;
+    color: #727371;
+
+}
+
+.x4 {
+
+    background-color: #cfbcef;
+    color: #727371;
+
+}
+
+.x8 {
+
+    background-color: #807af4;
+    color: white;
+
+}
+
+.x16 {
+
+    background-color: #d575f5;
+    color: white;
+
+}
+
+.x32 {
+
+    background-color: #f55ff5;
+    color: white;
+
+}
+
+.x64 {
+
+    background-color: #f63bab;
+    color: white;
+
+}
+
+.x128 {
+
+    background-color: #718ced;
+    color: white;
+
+}
+
+.x256 {
+
+    background-color: #6c63ed;
+    color: white;
+
+}
+
+.x512 {
+
+    background-color: #a451ed;
+    color: white;
+
+}
+
+.x1024 {
+
+    background-color: #ee4488;
+    color: white;
+
+}
+
+.x2048 {
+
+    background-color: #e400fd;
+    color: white;
+
+}
+
+.x4096 {
+
+    background-color: #8b19dc;
+    color: white;
+
+}
+
+.x8192 {
+
+    background-color: #af0387;
+    color: white;
+
+}
