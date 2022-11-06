@@ -1,16 +1,8 @@
-/*
-
-COLOUR PALETTE: 
-
-
-60 - 30 - 10
-
-*/
-
 
 body {
 
-    background-image: linear-gradient(#8420ab, #7b25ae, #722ab0, #682db3, #8420ab);
+    background-image: linear-gradient(to right bottom,
+    #a528ff, #b122fd, #bd1afa, #c810f8, #d200f5);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,6 +52,7 @@ body {
     border-radius: 10px;
     font-size: 40px;
     font-weight: bold;
+    transform: translateX();
 
 }
 

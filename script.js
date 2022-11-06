@@ -37,6 +37,8 @@ const columns = 4;
 
 hasEmptyTile = () => {
 
+    let count = 0;
+
     for (let r = 0; r < rows; r++) {
 
         for (let c = 0; c < columns; c++) {
@@ -49,6 +51,8 @@ hasEmptyTile = () => {
 
         }
 
+        return false;
+
     }
 
     return false;
@@ -57,7 +61,7 @@ hasEmptyTile = () => {
 
 setTile = () => {
 
-    if (!hasEmptyTile) {
+    if (!hasEmptyTile()) {
 
         return;
 
