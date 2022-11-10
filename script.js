@@ -2,6 +2,8 @@
 
 let gameBoard;
 let score = 0;
+let highScore = 0;
+let newHighScore;
 
 const rows = 4;
 const columns = 4;
@@ -32,6 +34,8 @@ const columns = 4;
             tile.classList.add("x8192");
     
         }
+
+        checkForGameOver();
     
     }
 
@@ -90,7 +94,7 @@ setTile = () => {
 
 }
 
-setGame = () => {
+function setGame() {
 
     // Setting up the board with multidimensional array
 
@@ -126,10 +130,22 @@ setGame = () => {
             document.getElementById("gameBoard").append(tile);
 
         }
+
     }
 
     setTile();
     setTile();
+
+    getScore();
+
+}
+
+
+function setNewGame() {
+
+    setScore();
+
+    window.location.reload();
 
 }
 
@@ -310,3 +326,81 @@ document.addEventListener("keyup", (key) => {
 // Sets the game when window is loaded
 
 window.onload = () => setGame()
+
+/*
+
+Check for defeat
+
+
+Check if move is possible
+Check if of any move is possible
+Check if there is any legal moves
+if not then you have lost
+
+*/
+
+function checkForGameOver() {
+
+    for (let r = 0; r < rows; r++) {
+
+        for (let c = 0; c < columns; c++) {
+
+            if (gameBoard[r][c] == 0 || canCollapse(r, c)) {
+
+                return false;
+
+            }
+        }
+    }
+
+    document.getElementById("defeatMessage").innerText = "You lost, restart the game to continue";
+    gameOver = true;
+    return true;
+
+}
+
+function canCollapse(row, column) {
+
+    if (row > 0 && gameBoard[row][column] == gameBoard[row - 1][column]) {
+
+        return true;
+
+    } else if (row < rows - 1 && gameBoard[row][column] == gameBoard[row + 1][column]) {
+
+        return true;
+
+    } else if (column > 0 && gameBoard[row][column] == gameBoard[row][column - 1]) {
+
+        return true;
+
+    } else if (column < columns - 1 && gameBoard[row][column] == gameBoard[row][column + 1]) {
+
+        return true;
+
+    }
+
+    return false;
+
+}
+
+function setScore() {
+
+    highScore = score;
+    newHighScore = localStorage.getItem("highScore");
+
+    if (newHighScore <= highScore) {
+
+        localStorage.setItem("highScore", highScore);
+
+    } else {
+
+        return;
+
+    }
+}
+
+function getScore() {
+
+    document.getElementById("high_score").innerText = localStorage.getItem("highScore");
+
+}

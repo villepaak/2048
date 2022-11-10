@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+
     <!-- GOOGLE FONT ROBOTO SLAB-->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,9 +28,31 @@
 </head>
 <body>
 
-    <h1 id="score" class="score">0</h1>
+    <div class="container">
 
-    <div id="gameBoard" class="game-board"></div>
+        <div class="score-container">
 
+            <h1 class="score">score <span id="score" class="score">0</span></h1>
+
+            <h1 class="score">high-score <span id="high_score" class="score"></span></h1>
+
+        </div>
+
+        <div class="game-container">
+
+            <div id="gameBoard" class="game-board"></div>
+
+            <i class="fa-solid fa-rotate-right" onclick="setNewGame()"></i>
+
+        </div>
+
+        <div class="defeat-screen">
+
+            <h2 id="defeatMessage"></h2>
+
+        </div>
+
+    </div>
+    
 </body>
 </html>

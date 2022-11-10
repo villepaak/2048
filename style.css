@@ -1,3 +1,9 @@
+* {
+
+    margin: 0;
+    padding: 0;
+
+}
 
 body {
 
@@ -7,7 +13,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Roboto Slab', sans-serif;
-    height: 713px;
+    height: 100vh;
 
 }
 
@@ -16,11 +22,38 @@ body {
 .score {
 
     color: rgb(244, 234, 249);
+    display: flex;
+    justify-content: center;
     font-size: 48px;
     font-weight: bold;
     text-align: center;
-    padding-top: 18px;
-    padding-bottom: 26px;
+    padding-left: 0.5em;
+
+}
+
+.defeat-screen {
+
+    color: rgb(244, 234, 249);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    padding-top: 12px;
+
+}
+
+
+.fa-rotate-right {
+
+    color: rgb(244, 234, 249);
+    font-size: 40px;
+    padding-top: 24px;
+    margin-bottom: 1em;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    
 
 }
 
@@ -52,7 +85,6 @@ body {
     border-radius: 10px;
     font-size: 40px;
     font-weight: bold;
-    transform: translateX();
 
 }
 
